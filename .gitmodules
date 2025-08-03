@@ -1,9 +1,9 @@
 [submodule "AI_Module (AI Based Posture Correction and Tracking)"]
 	path = AI_Module (AI Based Posture Correction and Tracking)
-	url = https://github.com/your-username/AI_Module.git
+	url = https://github.com/skynet-007-ai/Levelup-fitness-ai.git
 [submodule "Backend_Module"]
 	path = Backend_Module
-	url = https://github.com/your-username/Backend_Module.git
+	url = https://github.com/hasrshiitp22/Ai_Fitness.git
 [submodule "Frontend_Module"]
 	path = Frontend_Module
-	url = https://github.com/your-username/Frontend_Module.git
+	url = https://github.com/Hanshraj555/Hanshraj_work.git
