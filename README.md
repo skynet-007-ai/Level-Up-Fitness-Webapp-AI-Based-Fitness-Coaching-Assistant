@@ -1,85 +1,222 @@
-# 🤖 LevelUp Fitness – AI Pose Estimation Module
+# 💪 Level-Up Fitness – AI-Based Fitness Coaching Web Application
 
-This repository contains the AI Pose Estimation script used in the **LevelUp Fitness Web Application** – a capstone project aimed at bringing personalized, AI-powered fitness training to users through posture correction and exercise feedback.
+Level-Up Fitness is a **full-stack AI-powered fitness coaching platform** designed to help users improve exercise form, track workouts, and receive personalized fitness guidance.
 
-> 🧠 Built using Python, MediaPipe, and OpenCV for real-time exercise form detection and rep counting.
+The system integrates **computer vision, web technologies, and backend services** to deliver an intelligent fitness training experience.
 
----
-
-## 📌 Project Context
-
-This module is part of the larger **LevelUp Fitness** project, where team members worked on:
-- **Frontend** – User interface for workout sessions and profile tracking.
-- **Backend** – Authentication, workout data management, diet plans.
-- **AI Module (this repo)** – Real-time posture analysis and form feedback using pose estimation.
+This project was developed as a **capstone project combining Artificial Intelligence and Full-Stack Web Development**.
 
 ---
 
-## 📽️ Features of This Module
+# 🧠 System Overview
 
-✅ Real-time pose estimation using webcam or uploaded videos  
-✅ Supports **Push-ups** and **Squats**  
-✅ Auto-detects which exercise is being performed  
-✅ Gives feedback on correct or incorrect posture  
-✅ Reference model comparison (based on average Indian body pose structure)  
-✅ Rep counter integrated for performance tracking  
+The platform consists of three major modules:
 
----
+1️⃣ **AI Module** – Computer vision based posture detection and exercise analysis
+2️⃣ **Backend Module** – User authentication, workout management, and API services
+3️⃣ **Frontend Module** – Interactive user interface for workouts, yoga, meditation, and diet plans
 
-## 🛠️ Tech Stack
+The system enables users to:
 
-| Component | Tools/Libs Used |
-|----------|------------------|
-| Language | Python |
-| Pose Estimation | MediaPipe |
-| Video Processing | OpenCV |
-| Math & Logic | NumPy, math module |
-| Reference Comparison | Custom Joint Angles & Positioning |
-| UI Integration | Flask API (if connected with web app) |
+• Analyze exercise posture using AI
+• Track workout performance
+• Access guided workouts, yoga, and meditation
+• Receive diet plan recommendations
 
 ---
 
-## Team Members and Their Roles
+# 🏗️ Project Architecture
 
-### 1. Harsh Kumar (ME, 24A12RES271) – AI/ML Lead & Project Coordinator  
-**Responsibilities:**  
-- Led overall planning, architecture, and team coordination  
-- Developed AI-based posture correction using MediaPipe and OpenCV  
-- Designed logic for personalized workout recommendations  
-- Integrated AI modules with frontend/backend flow  
-
-**Skills Applied/Learned:**  
-- Machine Learning, Computer Vision  
-- YOLOv8n (Ultralytics), OpenCV, MediaPipe  
-- Object Detection Model Training and Custom Dataset Handling  
-- AI Workflow Planning and Real-time Integration  
-
----
-
-### 2. Hanshraj Kumar (24A12RES260) – Frontend Developer & UI Designer  
-**Responsibilities:**  
-- Developed frontend using HTML, CSS, and JavaScript  
-- Built secure login interface for user authentication  
-- Designed UI sections: Yoga, Meditation, Bodyweight Training, Diet  
-- Created responsive navbar and “To-Do List” feature  
-- Developed a static “Contact Us” section with developer info  
-
-**Skills Applied/Learned:**  
-- UI design, responsive layout (HTML/CSS)  
-- Modular component structuring  
-- Web navigation and content flow  
+```
+User
+  │
+  ▼
+Frontend (HTML, CSS, JavaScript)
+  │
+  ▼
+Backend (Node.js, Express.js)
+  │
+  ├── MongoDB Atlas (User Data)
+  │
+  └── AI Module (Python, MediaPipe, OpenCV)
+           │
+           ▼
+     Pose Estimation & Feedback
+```
 
 ---
 
-### 3. Harsh Kumar (24A12RES268) – Backend Developer & UX Designer  
-**Responsibilities:**  
-- Built backend using Node.js and Express.js  
-- Implemented JWT-based login and registration  
-- Managed MongoDB Atlas for storing user and profile data  
-- Developed logic for diet plan generation and PDF download  
-- Enabled secure logout, YouTube video embedding, and API routing  
+# 📂 Repository Structure
 
-**Skills Applied/Learned:**  
-- Node.js, Express.js, MongoDB  
-- JWT authentication and REST API  
-- Secure backend logic and database handling  
+```
+Level-Up-Fitness-Webapp-AI-Based-Fitness-Coaching-Assistant
+│
+├── AI_Module
+│   ├── src
+│   ├── demo
+│   ├── dataset_sample
+│   ├── reference_data
+│   └── requirements.txt
+│
+├── Backend_Module
+│   ├── config
+│   ├── middleware
+│   ├── models
+│   ├── routes
+│   ├── public
+│   ├── server.js
+│   └── package.json
+│
+├── Frontend_Module
+│   ├── landingpage
+│   ├── About
+│   ├── ContactUs
+│   ├── Profile
+│   ├── TODOList
+│   ├── Webpage1
+│   ├── Webpage2Med
+│   └── Webpage2Yoga
+│
+├── README.md
+├── LICENSE
+└── .gitignore
+```
+
+---
+
+# ✨ Key Features
+
+### 🤖 AI-Based Exercise Form Detection
+
+• Real-time pose estimation using **MediaPipe**
+• Detects **Push-ups and Squats**
+• Provides posture feedback
+• Counts exercise repetitions automatically
+
+### 👤 User Authentication System
+
+• Secure login and registration using **JWT**
+• User data stored in **MongoDB Atlas**
+
+### 🏋️ Workout Training Pages
+
+• Bodyweight exercise guidance
+• Exercise demonstration media
+• Training workflow interface
+
+### 🧘 Yoga and Meditation Sections
+
+• Guided yoga pages
+• Meditation resources for mental wellness
+
+### 🥗 Diet Plan Integration
+
+• Calorie-based diet plans
+• Downloadable PDF meal plans
+
+### 📝 Productivity Tools
+
+• Built-in **To-Do list** for tracking daily fitness goals
+
+---
+
+# 🛠️ Tech Stack
+
+| Component            | Technology            |
+| -------------------- | --------------------- |
+| Frontend             | HTML, CSS, JavaScript |
+| Backend              | Node.js, Express.js   |
+| Database             | MongoDB Atlas         |
+| Authentication       | JSON Web Tokens (JWT) |
+| AI Module            | Python                |
+| Pose Estimation      | MediaPipe             |
+| Computer Vision      | OpenCV                |
+| Numerical Processing | NumPy                 |
+
+---
+
+# ⚙️ Installation and Setup
+
+### 1️⃣ Clone the repository
+
+```
+git clone https://github.com/skynet-007-ai/Level-Up-Fitness-Webapp-AI-Based-Fitness-Coaching-Assistant.git
+cd Level-Up-Fitness-Webapp-AI-Based-Fitness-Coaching-Assistant
+```
+
+---
+
+### 2️⃣ Setup Backend
+
+```
+cd Backend_Module
+npm install
+node server.js
+```
+
+---
+
+### 3️⃣ Run AI Module
+
+```
+cd AI_Module
+pip install -r requirements.txt
+python src/exercise_pose_feedback.py
+```
+
+---
+
+### 4️⃣ Run Frontend
+
+Open the HTML files inside:
+
+```
+Frontend_Module/landingpage
+```
+
+in your browser.
+
+---
+
+# 🚀 Future Improvements
+
+• Support more exercises (lunges, planks, pull-ups)
+• Integrate AI module directly into the web interface
+• Add real-time voice feedback for posture correction
+• Implement workout progress analytics dashboard
+• Deploy the system as a cloud-based fitness assistant
+
+---
+
+# 👨‍💻 Team Members
+
+### Harsh Kumar (24A12RES271) – AI/ML Lead & Project Coordinator
+
+• Designed AI-based posture detection system
+• Implemented MediaPipe + OpenCV pose estimation
+• Integrated AI module with web application architecture
+
+### Hanshraj Kumar (24A12RES260) – Frontend Developer
+
+• Developed UI using HTML, CSS, JavaScript
+• Designed workout and yoga interface
+
+### Harsh Kumar (24A12RES268) – Backend Developer
+
+• Built backend using Node.js and Express.js
+• Implemented authentication with JWT
+• Managed MongoDB database and API routes
+
+---
+
+# 📌 Project Status
+
+This project was developed as part of the **Level-Up Fitness Capstone Project**.
+
+It demonstrates how **Artificial Intelligence, Computer Vision, and Full-Stack Web Development** can be combined to build an intelligent fitness coaching platform.
+
+---
+
+# 📜 License
+
+This project is licensed under the **MIT License**.
