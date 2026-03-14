@@ -13,6 +13,8 @@ This project was developed as a **capstone project combining Artificial Intellig
 The platform consists of three major modules:
 
 1️⃣ **AI Module** – Computer vision based posture detection and exercise analysis
+(Standalone repository: https://github.com/skynet-007-ai/level-up-fitness-ai-pose-estimation-module)
+
 2️⃣ **Backend Module** – User authentication, workout management, and API services
 3️⃣ **Frontend Module** – Interactive user interface for workouts, yoga, meditation, and diet plans
 
@@ -120,6 +122,16 @@ Level-Up-Fitness-Webapp-AI-Based-Fitness-Coaching-Assistant
 
 ---
 
+## 📸 Demo
+
+### Push-up Detection
+![Pushup Detection](AI_Module/demo/output_example_pushups.png)
+
+### Squat Detection
+![Squat Detection](AI_Module/demo/output_example_squats.png)
+
+---
+
 # 🛠️ Tech Stack
 
 | Component            | Technology            |
@@ -191,6 +203,7 @@ in your browser.
 # 👨‍💻 Team Members
 
 ### Harsh Kumar (24A12RES271) – AI/ML Lead & Project Coordinator
+GitHub: https://github.com/skynet-007-ai
 
 • Designed AI-based posture detection system
 • Implemented MediaPipe + OpenCV pose estimation
