@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Fitness Profile</title>
+  <link rel="stylesheet" href="profile.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  
+</head>
+
+<body>
+
+  <nav>
+    <div class="logo">Level Up</div>
+    <input type="checkbox" id="click">
+    <label for="click" class="menu-btn">
+      <i class="fa-solid fa-bars"></i>
+    </label>
+    <ul>
+      <li><a href="/dashboard">Home</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a class="prfl_active" href="/profile">Profile</a></li>
+      <li><a href="/contactUs">Contact</a></li>
+      <li><a href="/ToDoList">ToDo List</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <div class="profile">
+      <div class="profile-form">
+        <h1><i class="fas fa-dumbbell"></i> Fitness Profile</h1>
+        <div class="form-group">
+          <label><i class="fas fa-user"></i> Name:</label>
+          <span id="name">Loading...</span>
+        </div>
+        <div class="form-group">
+          <label><i class="fas fa-birthday-cake"></i> Age:</label>
+          <span id="age">Loading...</span>
+        </div>
+        <div class="form-group">
+          <label><i class="fas fa-weight"></i> Weight (kg):</label>
+          <span id="weight">Loading...</span>
+        </div>
+        <div class="form-group">
+          <label><i class="fas fa-arrows-alt-v"></i> Height (cm):</label>
+          <span id="height">Loading...</span>
+        </div>
+        <button onclick="logout()">Logout</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    async function fetchUserInfo() {
+      const token = localStorage.getItem('token');
+      if (!token) {
+        alert('Please log in first.');
+        window.location.href = '/';
+        return;
+      }
+
+      try {
+        const res = await fetch('/api/userinfo', {
+          headers: { Authorization: 'Bearer ' + token }
+        });
+
+        if (!res.ok) throw new Error('Unauthorized');
+
+        const data = await res.json();
+        document.getElementById('name').textContent = data.name;
+        document.getElementById('age').textContent = data.age;
+        document.getElementById('weight').textContent = data.weight;
+        document.getElementById('height').textContent = data.height;
+      } catch (err) {
+        alert('Failed to load profile. Please login again.');
+        localStorage.removeItem('token');
+        window.location.href = '/';
+      }
+    }
+
+    function logout() {
+      localStorage.removeItem('token');
+      window.location.href = '/';
+    }
+
+    fetchUserInfo();
+  </script>
+
+</body>
+</html>
